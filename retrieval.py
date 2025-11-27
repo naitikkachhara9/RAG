@@ -103,7 +103,7 @@
 import os
 from typing import List, Dict
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
 
@@ -132,12 +132,13 @@ def _get_keys():
     return google_key
 
 def load_db():
-    embeddings = OpenAIEmbeddings()
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     db = Chroma(persist_directory=CHROMA_PERSIST_DIR, embedding_function=embeddings)
     return db
 
 def retrieve(question: str, top_k: int = TOP_K):
     db = load_db()
+    breakpoint()
     results = db.similarity_search_with_score(question, k=top_k)
     chunks = []
     for doc, score in results:
@@ -180,7 +181,7 @@ def get_answer(question: str):
     prompt = build_system_prompt(question, chunks)
 
     try:
-        google_key, openai_key = _get_keys()
+        google_key = _get_keys()
         if google_key:
             # If using provider that needs env var, ensure the library can find it.
             os.environ["GOOGLE_API_KEY"] = google_key

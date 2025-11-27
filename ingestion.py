@@ -98,11 +98,10 @@
 import os
 from pathlib import Path
 import json
-# import pdfplumber
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from dotenv import load_dotenv
 load_dotenv()
@@ -110,27 +109,22 @@ load_dotenv()
 # CONFIG
 DATA_DIR = Path("data")            # put your docs here (txt, md, pdf)
 CHROMA_PERSIST_DIR = "chroma_db"  # persisted DB dir
-# EMBEDDING_MODEL = "text-embedding-3-large"  # OpenAI embedding model (adjust if needed)
 
 def _prefer_streamlit_secrets():
     try:
         import streamlit as st
         if hasattr(st, "secrets") and st.secrets:
-            # prefer nested or top-level keys
-            openai_key = st.secrets.get("openai", {}).get("api_key", st.secrets.get("OPENAI_API_KEY"))
-            if openai_key:
-                os.environ["OPENAI_API_KEY"] = openai_key
+            hf_key = st.secrets.get("huggingface", {}).get("api_key", st.secrets.get("HUGGINGFACEHUB_API_TOKEN"))
+            if hf_key:
+                os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_key
     except Exception:
         pass
 
-# set environment from Streamlit secrets if available (useful when this module is imported by app.py)
 _prefer_streamlit_secrets()
 
 def load_file(path: Path) -> str:
     if path.suffix.lower() in [".txt", ".md"]:
         return path.read_text(encoding="utf-8", errors="ignore")
-    # elif path.suffix.lower() == ".pdf":
-    #     return load_pdf_text(path)
     else:
         raise ValueError("Unsupported file type: " + str(path))
 
@@ -143,7 +137,6 @@ def make_documents():
             print(f"skip {file}: {e}")
             continue
 
-        # naive section split: try to split by headings '##' or 'Section' or fallback
         sections = []
         if "\n## " in text or "\n# " in text:
             parts = [p.strip() for p in text.split("\n## ") if p.strip()]
@@ -181,8 +174,8 @@ def chunk_and_index():
             }
             lc_docs.append(Document(page_content=chunk, metadata=metadata))
 
-    # ensure OPENAI_API_KEY is set (may have been populated from Streamlit secrets above)
-    embeddings = OpenAIEmbeddings()
+    # Use HuggingFace embeddings (runs locally, no API key needed)
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     db = Chroma.from_documents(
         documents=lc_docs,

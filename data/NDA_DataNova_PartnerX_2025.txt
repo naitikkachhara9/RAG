@@ -1,0 +1,75 @@
+NON-DISCLOSURE AGREEMENT (NDA)  
+Date: March 15, 2025  
+Disclosing Party: DataNova Analytics (“Discloser”)  
+Receiving Party: PartnerX Labs (“Recipient”)
+
+---------------------------------------
+1. PURPOSE
+---------------------------------------
+The Parties intend to explore a potential collaboration involving joint research, product-integration opportunities, and exchange of certain technical, analytical, and business data. The discussions may involve proprietary algorithms, financial projections, software architectures, customer-segmentation models, and confidential product-roadmap items.
+
+---------------------------------------
+2. DEFINITION OF CONFIDENTIAL INFORMATION
+---------------------------------------
+Confidential Information refers to any information designated as confidential or that, under the circumstances, should reasonably be considered confidential. This includes, but is not limited to:  
+- business plans,  
+- model architectures and pipelines,  
+- neural-network parameters,  
+- prompt engineering strategies,  
+- any written, oral, electronic, or visual information shared by the Discloser.
+
+Confidential Information does not include information that:  
+(a) is publicly available through no fault of the Recipient,  
+(b) was independently developed without access to the Discloser’s information,  
+(c) is already known to the Recipient before disclosure, as documented by records,  
+(d) is required to be disclosed by law or court order.
+
+---------------------------------------
+3. OBLIGATIONS OF RECIPIENT
+---------------------------------------
+Recipient agrees to:  
+(a) maintain confidentiality using at least reasonable care;  
+(b) restrict disclosure only to employees or contractors with a legitimate need-to-know;  
+(c) use Confidential Information solely for the Purpose;  
+(d) notify Discloser promptly upon discovering unauthorized access;  
+(e) return or destroy all Confidential Information upon request.
+
+Recipient shall implement controls such as access restrictions, encrypted storage, audit logs, and internal confidentiality policies.
+
+---------------------------------------
+4. TERM
+---------------------------------------
+This Agreement remains in effect for five (5) years from the date of last disclosure, unless extended by mutual agreement.
+
+Confidentiality obligations survive termination.
+
+---------------------------------------
+5. NO LICENSES
+---------------------------------------
+Nothing in this Agreement grants Recipient any rights to Discloser’s intellectual property except as expressly stated.
+
+---------------------------------------
+6. WARRANTY DISCLAIMER
+---------------------------------------
+All information is provided “as is,” without warranties of any kind.
+
+---------------------------------------
+7. RETURN OF MATERIALS
+---------------------------------------
+Upon request, Recipient shall return or securely destroy all Confidential Information, including digital copies, backups, derivative notes, and machine-learning outputs if they reveal confidential details.
+
+---------------------------------------
+8. GOVERNING LAW
+---------------------------------------
+This Agreement is governed by the laws of India.
+
+---------------------------------------
+9. MISCELLANEOUS
+---------------------------------------
+This Agreement represents the entire agreement between the Parties, superseding all prior communications.
+
+---------------------------------------
+SIGNATURES
+---------------------------------------
+DataNova Analytics — CEO  
+PartnerX Labs — CEO

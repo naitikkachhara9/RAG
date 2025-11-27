@@ -1,0 +1,96 @@
+SERVICE AGREEMENT  
+Effective Date: January 1, 2024  
+Parties: AlphaTech Solutions Pvt. Ltd. ("Provider") and BrightRetail Ltd. ("Client")
+
+---------------------------------------
+1. OVERVIEW AND PURPOSE
+---------------------------------------
+This Service Agreement (“Agreement”) sets forth the terms and conditions under which Provider will deliver comprehensive software maintenance, infrastructure stability services, and customer-support operations for Client’s RetailPOS ecosystem.
+
+The purpose of this Agreement is to ensure continuity, predictability, and reliability of Client’s mission-critical point-of-sale applications, which include retail checkout modules, payment integration components, loyalty engines, and internal analytics dashboards. Provider will deliver the Services as defined herein with commercially reasonable skill, best-practice engineering standards, and a commitment to ongoing performance optimization.
+
+The scope of Services defined in this Agreement applies across all Client retail outlets located in India and any additional branches that may be added during the term, provided Client notifies Provider in writing of such expansions.
+
+---------------------------------------
+2. SCOPE OF SERVICES
+---------------------------------------
+2.1 Software Maintenance  
+Provider shall deliver ongoing maintenance including, but not limited to:  
+(a) bug detection and resolution;  
+(b) security patching within industry-standard timelines;  
+(c) quarterly feature updates;  
+(d) optimization of system performance;  
+(e) version upgrades aligned with Provider’s internal product lifecycle.
+
+2.2 Incident Support  
+Provider will maintain a 24x7 incident-response helpdesk accessible via email, phone, or portal. Incidents shall be categorized into Severity 1, 2, or 3, based on impact. Severity 1 incidents (e.g., complete outage, inability to process payments) require one-hour response and continuous work until resolved.
+
+2.3 Technology Advisory  
+Provider will provide quarterly architecture reviews, future-state recommendations, and compliance suggestions to ensure Client’s systems remain scalable and secure.
+
+2.4 Exclusions  
+The following activities are not covered unless explicitly included through a Change Request:
+- major module redevelopment,
+- integrations with third-party APIs not previously supported,
+- advanced data-science or custom-AI modules.
+
+---------------------------------------
+3. TERM AND RENEWAL
+---------------------------------------
+The Agreement commences on the Effective Date and shall continue for twelve (12) months. It automatically renews for successive one-year periods unless either party issues a non-renewal notice at least sixty (60) days prior to the renewal date.
+
+Provider will notify Client of any material change in pricing or scope at least ninety (90) days before renewal.
+
+---------------------------------------
+4. FEES AND PAYMENT TERMS
+---------------------------------------
+4.1 Fees  
+Client shall compensate Provider INR 250,000 per quarter for the Services. Additional work outside Scope will follow a mutually agreed Change Request.
+
+4.2 Payment Terms  
+Invoices are due within thirty (30) days. Late payments incur interest at one and a half percent (1.5%) per month.
+
+4.3 Taxes  
+All amounts are exclusive of taxes, which shall be borne by Client.
+
+---------------------------------------
+5. CONFIDENTIALITY
+---------------------------------------
+Each party shall treat the other party’s confidential information as strictly confidential. Confidential Information includes business strategies, customer data, source code, proprietary workflows, security details, and financial information.
+
+Obligations survive termination for a period of three (3) years.
+
+---------------------------------------
+6. DATA PROTECTION
+---------------------------------------
+Provider shall implement industry-standard encryption, access controls, logging, and data-retention safeguards. Provider shall promptly notify Client of any suspected data breach affecting Client’s systems.
+
+---------------------------------------
+7. TERMINATION
+---------------------------------------
+Either party may terminate for material breach if the breach is not cured within thirty (30) days of written notice. Either party may also terminate immediately if the other party becomes insolvent or enters bankruptcy.
+
+Upon termination, Provider shall return all Client data and assist in transition activities for a period of up to thirty (30) days.
+
+---------------------------------------
+8. LIMITATION OF LIABILITY
+---------------------------------------
+Provider’s aggregate liability under this Agreement shall not exceed the total fees paid by Client in the twelve (12) months preceding the claim.
+
+---------------------------------------
+9. GENERAL TERMS
+---------------------------------------
+9.1 Governing Law  
+This Agreement is governed by the laws of India.
+
+9.2 Notices  
+Notices shall be delivered via registered post or email with delivery confirmation.
+
+9.3 Entire Agreement  
+This Agreement constitutes the entire understanding between the parties and supersedes prior discussions.
+
+---------------------------------------
+SIGNATURES
+---------------------------------------
+AlphaTech Solutions — Authorized Signatory  
+BrightRetail Ltd. — Authorized Signatory

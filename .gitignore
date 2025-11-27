@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Secrets — do NOT commit
+.env
+.streamlit/secrets.toml

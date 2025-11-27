@@ -1,0 +1,8 @@
+# Ignore virtual environment
+rag_venv/
+
+# Ignore other files or directories as needed
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

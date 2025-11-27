@@ -138,7 +138,6 @@ def load_db():
 
 def retrieve(question: str, top_k: int = TOP_K):
     db = load_db()
-    breakpoint()
     results = db.similarity_search_with_score(question, k=top_k)
     chunks = []
     for doc, score in results:

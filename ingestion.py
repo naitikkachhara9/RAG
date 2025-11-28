@@ -128,6 +128,31 @@ def load_file(path: Path) -> str:
     else:
         raise ValueError("Unsupported file type: " + str(path))
 
+# def make_documents():
+#     docs = []
+#     for file in sorted(DATA_DIR.glob("*")):
+#         try:
+#             text = load_file(file)
+#         except Exception as e:
+#             print(f"skip {file}: {e}")
+#             continue
+
+#         sections = []
+#         if "\n## " in text or "\n# " in text:
+#             parts = [p.strip() for p in text.split("\n## ") if p.strip()]
+#             sections = [(f"section_{i+1}", p) for i,p in enumerate(parts)]
+#         else:
+#             sections = [("full", text)]
+
+#         for sec_title, sec_text in sections:
+#             docs.append({
+#                 "source_path": str(file),
+#                 "contract_id": file.stem,
+#                 "section_title": sec_title,
+#                 "text": sec_text
+#             })
+#     return docs
+
 def make_documents():
     docs = []
     for file in sorted(DATA_DIR.glob("*")):
@@ -138,9 +163,17 @@ def make_documents():
             continue
 
         sections = []
-        if "\n## " in text or "\n# " in text:
-            parts = [p.strip() for p in text.split("\n## ") if p.strip()]
-            sections = [(f"section_{i+1}", p) for i,p in enumerate(parts)]
+        # Split by headings (assuming headings are marked by lines with dashes or numbered sections)
+        if "\n## " in text or "\n# " in text or "---------------------------------------" in text:
+            # Split on the dashed lines to identify sections
+            parts = [p.strip() for p in text.split("---------------------------------------") if p.strip()]
+            for i, part in enumerate(parts):
+                # Use the first line of each part as the section title
+                lines = part.splitlines()
+                if lines:
+                    sec_title = lines[0].strip()  # First line as title
+                    sec_text = "\n".join(lines[1:]).strip()  # Remaining lines as content
+                    sections.append((sec_title, sec_text))
         else:
             sections = [("full", text)]
 
